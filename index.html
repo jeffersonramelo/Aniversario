@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para Drica, com amor 💗</title>
+  <meta name="description" content="Uma homenagem cheia de carinho para Drica." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Marck+Script&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0e14;
+      --card: #121826;
+      --text: #e6e8ee;
+      --muted: #b7bdcc;
+      --rose: #ff6b9e;
+      --rose-2: #ff86af;
+      --highlight: #ffd1e1;
+      --accent: #7bdff2;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; background:radial-gradient(1200px 800px at 80% -10%, #1b2233 0%, #0b0e14 60%), var(--bg);
+      color:var(--text); font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; line-height:1.6;
+    }
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px);
+      background:rgba(11,14,20,.65); border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .container{max-width:1100px; margin:0 auto; padding:0 20px}
+    nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.5px}
+    .brand .logo{width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg, var(--rose), var(--rose-2)); box-shadow:0 8px 16px rgba(255,107,158,.35)}
+    .brand span{font-family:"Marck Script", cursive; font-size:22px; color:var(--highlight)}
+    .menu a{color:var(--muted); text-decoration:none; margin-left:18px; font-weight:500}
+    .menu a:hover{color:#fff}
+
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:26px; align-items:center; padding:72px 0}
+    .hero h1{font-size:48px; line-height:1.1; margin:0 0 16px; font-weight:800}
+    .hero h1 .script{font-family:"Marck Script", cursive; color:var(--highlight); font-weight:400}
+    .hero p{color:var(--muted); margin:0 0 20px}
+    .cta{display:flex; gap:14px; flex-wrap:wrap}
+    .btn{appearance:none; border:none; padding:12px 18px; border-radius:14px; font-weight:700; cursor:pointer}
+    .btn.primary{background:linear-gradient(135deg, var(--rose), var(--rose-2)); color:#101318; box-shadow:0 14px 28px rgba(255,107,158,.28)}
+    .btn.ghost{background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.15)}
+
+    .portrait{justify-self:end}
+    .portrait .frame{width:280px; height:280px; border-radius:28px; background:linear-gradient(135deg, rgba(255,107,158,.25), rgba(123,223,242,.18)); padding:6px}
+    .portrait img{width:100%; height:100%; object-fit:contrain; border-radius:22px; display:block; filter:saturate(1.05); box-shadow:0 16px 50px rgba(0,0,0,.45)}
+    .caption{font-size:13px; color:var(--muted); text-align:center; margin-top:8px}
+
+    section{padding:56px 0}
+    .section-title{font-size:28px; margin:0 0 20px; display:flex; align-items:center; gap:10px}
+    .section-title .dot{width:8px; height:8px; border-radius:50%; background:var(--rose)}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:18px; box-shadow:0 10px 24px rgba(0,0,0,.25)
+    }
+
+    /* Qualidades */
+    .qualities{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .qualities .q{display:flex; gap:12px; align-items:flex-start}
+    .icon{width:36px; height:36px; border-radius:12px; display:grid; place-items:center; background:linear-gradient(135deg, rgba(255,107,158,.22), rgba(255,209,225,.14)); border:1px solid rgba(255,255,255,.08)}
+
+    /* Linha do tempo */
+    .timeline{position:relative; margin-top:8px}
+    .timeline::before{content:""; position:absolute; left:16px; top:0; bottom:0; width:2px; background:linear-gradient(180deg, rgba(255,255,255,.2), rgba(255,255,255,.06))}
+    .t-item{display:grid; grid-template-columns:40px 1fr; gap:14px; margin:14px 0}
+    .t-item .t-dot{width:12px; height:12px; border-radius:50%; background:var(--rose); margin:4px 0 0 10px; box-shadow:0 0 0 4px rgba(255,107,158,.12)}
+    .t-item .t-content{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:12px 14px}
+    .t-date{font-size:12px; color:var(--muted); font-weight:600}
+
+    /* Galeria */
+    .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:10px}
+    .gallery img{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; filter:contrast(1.05) saturate(1.05)}
+
+    /* Carta */
+    .letter{font-size:18px; color:#f4f6ff; letter-spacing:.2px}
+    .letter p{margin:12px 0}
+    .signature{font-family:"Marck Script", cursive; color:var(--highlight); font-size:28px}
+
+    /* Rodapé */
+    footer{padding:30px 0 60px; color:var(--muted); text-align:center}
+
+    /* Animações sutis */
+    .reveal{opacity:0; transform:translateY(10px); animation:fadeUp .8s ease both}
+    .reveal2{opacity:0; transform:translateY(12px); animation:fadeUp 1s .05s ease both}
+    .reveal3{opacity:0; transform:translateY(14px); animation:fadeUp 1.1s .1s ease both}
+    @keyframes fadeUp{to{opacity:1; transform:none}}
+
+    /* Responsivo */
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr; text-align:center}
+      .portrait{justify-self:center}
+      .qualities{grid-template-columns:1fr 1fr}
+      .gallery{grid-template-columns:1fr 1fr 1fr}
+    }
+    @media (max-width: 560px){
+      .hero h1{font-size:36px}
+      .qualities{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr}
+    }
+
+    /* Acessibilidade: respeitar preferências de movimento */
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .reveal, .reveal2, .reveal3{animation:none; opacity:1; transform:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <span>Drica</span>
+        </div>
+        <div class="menu" aria-label="navegação">
+          <a href="#historia">Nossa história</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#carta">Carta</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1 class="reveal">Para <span class="script">Drica</span>, com amor</h1>
+        <p class="reveal2">Uma página simples, mas feita com todo o carinho, para celebrar quem você é e tudo o que vivemos juntos.</p>
+        <div class="cta reveal3">
+          <a class="btn primary" href="#carta">Ler minha carta</a>
+          <a class="btn ghost" href="#galeria">Ver lembranças</a>
+        </div>
+      </div>
+      <div class="portrait reveal2" aria-label="foto destaque">
+        <div class="frame">
+          <!-- Substitua src por uma foto da Drica -->
+          <img src="principal.jpeg" alt="Foto da Drica sorrindo">
+        </div>
+        <div class="caption">“Seu sorriso ilumina qualquer lugar.”</div>
+      </div>
+    </section>
+
+    <section id="historia">
+      <h2 class="section-title"><span class="dot"></span> Nossa história</h2>
+      <div class="card timeline">
+        <div class="t-item reveal">
+          <div class="t-dot" aria-hidden="true"></div>
+          <div class="t-content">
+            <div class="t-date">O começo</div>
+            <p>Aquele primeiro encontro que virou conversa longa, risadas e a certeza de que algo especial começava ali.</p>
+          </div>
+        </div>
+        <div class="t-item reveal2">
+          <div class="t-dot" aria-hidden="true"></div>
+          <div class="t-content">
+            <div class="t-date">Nossas conquistas</div>
+            <p>Vitórias pequenas e grandes: projetos, viagens e sonhos que fomos riscando juntos da lista.</p>
+          </div>
+        </div>
+        <div class="t-item reveal3">
+          <div class="t-dot" aria-hidden="true"></div>
+          <div class="t-content">
+            <div class="t-date">O que nos move</div>
+            <p>Companheirismo, respeito e aquele amor tranquilo de todos os dias.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title"><span class="dot"></span> Qualidades da Drica</h2>
+      <div class="qualities">
+        <div class="card q reveal">
+          <div class="icon" aria-hidden="true">💖</div>
+          <div>
+            <h3>Carinho</h3>
+            <p>Seu cuidado com a família faz tudo ficar mais leve e bonito.</p>
+          </div>
+        </div>
+        <div class="card q reveal2">
+          <div class="icon" aria-hidden="true">✨</div>
+          <div>
+            <h3>Luz</h3>
+            <p>Você ilumina os lugares por onde passa com a sua energia.</p>
+          </div>
+        </div>
+        <div class="card q reveal3">
+          <div class="icon" aria-hidden="true">🧠</div>
+          <div>
+            <h3>Força & Inteligência</h3>
+            <p>Determinação e sabedoria para encarar qualquer desafio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <h2 class="section-title"><span class="dot"></span> Galeria de lembranças</h2>
+      <div class="gallery card" aria-label="galeria de fotos">
+        <!-- Substitua por suas fotos locais (ex.: ./imgs/praia.jpg) -->
+        <img src="momento.jpeg" alt="Foto 1 - momento especial">
+        <img src="especial.jpeg" alt="Foto 2 - viagem marcante">
+        <img src="riso.jpeg" alt="Foto 3 - risos">
+        <img src="celebra.jpeg" alt="Foto 4 - celebração">
+        <img src="sol.jpeg" alt="Foto 5 - pôr do sol">
+        <img src="alegria.jpeg" alt="Foto 6 - alegria">
+        <img src="abraco.jpeg" alt="Foto 7 - abraço">
+        <img src="brinde.jpeg" alt="Foto 8 - brinde">
+      </div>
+    </section>
+
+    <section id="carta">
+      <h2 class="section-title"><span class="dot"></span> Carta para você</h2>
+      <div class="card letter">
+        <p>Drica,</p>
+        <p>Obrigado por cada gesto de carinho, por me inspirar a ser melhor e por transformar a rotina em algo extraordinário. Ao seu lado, aprendo todos os dias sobre amor, parceria e esperança.</p>
+        <p>Que esta página seja mais uma lembrança do quanto você é especial para nós — hoje e sempre.</p>
+        <p class="signature">Com amor, Jefferson e Marjorie</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      Feito com ❤️ em HTML & CSS • <a href="#top" style="color:var(--highlight); text-decoration:none">voltar ao topo</a>
+    </div>
+  </footer>
+</body>
+</html>
